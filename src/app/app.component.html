@@ -3,22 +3,23 @@
     <h1 class="timer-counter">00:00</h1>
     <h3 class="timer-status">Enfocate</h3>
   </section>
-  <section class="add-task">
-    <input id="name" type="text" placeholder="Name" />
-    <input type="number" placeholder="mm" min="1" />
-    <button>Add task</button>
-  </section>
+  <form
+    class="add-task"
+    #taskForm="ngForm"
+    (ngSubmit)="onSaveTask(taskForm.value)"
+  >
+    <input required name="name" ngModel type="text" placeholder="Name" />
+    <input
+      required
+      name="minutes"
+      ngModel
+      type="number"
+      placeholder="mm"
+      min="1"
+    />
+    <button type="submit">Add task</button>
+  </form>
   <section class="list-tasks">
-    <div class="list-row">
-      <p>In progress...</p>
-      <p>Name task</p>
-      <button>Delete</button>
-    </div>
-    <div class="list-row">
-      <p>In progress...</p>
-      <p>Name task</p>
-      <button>Delete</button>
-    </div>
     <div class="list-row">
       <p>In progress...</p>
       <p>Name task</p>
