@@ -1,4 +1,4 @@
-import { TaskInterface } from './../app/app.component';
+import { TaskInterface } from '../app.component';
 import { Injectable } from '@angular/core';
 import { Observable, Observer, Subject } from 'rxjs';
 
