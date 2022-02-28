@@ -1,7 +1,8 @@
-import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
+import { TaskService } from './services/task.service';
 
 export interface TaskInterface {
+  status: boolean;
   name: string;
   minutes: number;
 }
@@ -12,9 +13,10 @@ export interface TaskInterface {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  constructor(public taskSvc: TaskService) {}
   onSaveTask(form: TaskInterface): void {
     if (!form.name) return window.alert('Add task name please. =)');
     if (!form.minutes) return window.alert('Add task time please. =)');
-    console.table({ form });
+    this.taskSvc.addTask(form);
   }
 }

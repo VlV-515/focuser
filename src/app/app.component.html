@@ -17,12 +17,15 @@
       placeholder="mm"
       min="1"
     />
-    <button type="submit">Add task</button>
+    <button type="submit" [disabled]="taskForm.invalid">Add task</button>
   </form>
   <section class="list-tasks">
-    <div class="list-row">
-      <p>In progress...</p>
-      <p>Name task</p>
+    <div
+      class="list-row"
+      *ngFor="let task of taskSvc.getTaskList() | async; let i = index"
+    >
+      <p>{{ task.name | titlecase }} - {{ task.minutes }} mm</p>
+      <p>{{ task.status ? "In process" : "Waiting" }}</p>
       <button>Delete</button>
     </div>
   </section>
