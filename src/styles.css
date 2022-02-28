@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /* Created with https://www.css-gradient.com */
+  background: #1867a7;
+  background: -webkit-linear-gradient(top, #1867a7, #2cc975);
+  background: -moz-linear-gradient(top, #1867a7, #2cc975);
+  background: linear-gradient(to bottom, #1867a7, #2cc975);
+}
+button {
+  padding: 0 8px;
+  background-color: #084594;
+  color: #fff;
+  border-radius: 5px;
+  border-style: none;
+  height: 28px;
+  margin: 1px;
+}

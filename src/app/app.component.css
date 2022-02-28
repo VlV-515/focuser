@@ -1,0 +1,59 @@
+.container {
+  width: 25rem;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 10px #085e7d;
+  text-align: center;
+}
+/* TIMER */
+.timer {
+  padding: 1rem 0;
+}
+.timer > * {
+  padding: 15px 0;
+}
+.timer-counter {
+  font-size: 2rem;
+  color: #fff;
+}
+.timer-status {
+  color: #ffd32d;
+  text-decoration: underline overline #ffd32d 3px;
+  padding: 6px 0;
+}
+/* TASKS */
+.add-task {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-task > * {
+  border-radius: 5px;
+  border-style: none;
+  height: 26px;
+  margin: 1px;
+}
+.add-task > input:first-child {
+  padding: 0 6px;
+  width: 130px;
+}
+.add-task > input:nth-child(2) {
+  padding: 0 4px;
+  width: 50px;
+}
+/* List tasks */
+.list-tasks {
+  margin-top: 1.3rem;
+}
+.list-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0px 6px 1px #085e7d;
+  padding: 15px 0;
+  border-radius: 5px;
+  color: #fff;
+}
