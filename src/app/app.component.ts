@@ -19,4 +19,10 @@ export class AppComponent {
     if (!form.minutes) return window.alert('Add task time please. =)');
     this.taskSvc.addTask(form);
   }
+  onDelete(index: number): void {
+    this.taskSvc.deleteTask(index);
+  }
+  onStart(index: number): void {
+    this.taskSvc.startTask(index);
+  }
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <section class="timer">
-    <h1 class="timer-counter">00:00</h1>
-    <h3 class="timer-status">Enfocate</h3>
+    <h1 class="timer-counter">{{ taskSvc.getTimeName() | async }}</h1>
+    <h3 class="timer-status">{{ taskSvc.getTimeTime() | async }}</h3>
   </section>
   <form
     class="add-task"
@@ -27,8 +27,8 @@
       <p>{{ task.name | titlecase }} - {{ task.minutes }} mm</p>
       <p>{{ task.status ? "In process" : "Waiting" }}</p>
       <ng-container *ngIf="!task.status">
-        <button class="btn-start">Start</button>
-        <button>Delete</button>
+        <button (click)="onStart(i)" class="btn-start">Start</button>
+        <button (click)="onDelete(i)">Delete</button>
       </ng-container>
     </div>
   </section>
