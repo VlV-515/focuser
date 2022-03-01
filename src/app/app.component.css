@@ -36,6 +36,7 @@
   height: 26px;
   margin: 1px;
 }
+
 .add-task > input:first-child {
   padding: 0 6px;
   width: 130px;
@@ -56,4 +57,10 @@
   padding: 15px 0;
   border-radius: 5px;
   color: #fff;
+}
+.btn-start {
+  background-color: #076b4a;
+}
+.btn-start:hover {
+  background-color: #076b4ab7;
 }

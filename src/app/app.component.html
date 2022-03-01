@@ -26,7 +26,10 @@
     >
       <p>{{ task.name | titlecase }} - {{ task.minutes }} mm</p>
       <p>{{ task.status ? "In process" : "Waiting" }}</p>
-      <button>Delete</button>
+      <ng-container *ngIf="!task.status">
+        <button class="btn-start">Start</button>
+        <button>Delete</button>
+      </ng-container>
     </div>
   </section>
 </div>
